@@ -4,15 +4,17 @@
  * and open the template in the editor.
  */
 package garage.hepl;
+import People.Personne;
+
 
 /**
  *
  * @author gilles
  * @author varga
  */
-public class ApplicationGestionAutentification extends javax.swing.JFrame {
+public class ApplicationGestionAutentification extends javax.swing.JDialog {
 
-    /*private boolean modif;
+    private boolean modif;
     
     public ApplicationGestionAutentification() {
         initComponents();
@@ -25,7 +27,7 @@ public class ApplicationGestionAutentification extends javax.swing.JFrame {
         initComponents();
         
         modif = false;
-    }*/
+    }
     
 
     /**
@@ -38,25 +40,16 @@ public class ApplicationGestionAutentification extends javax.swing.JFrame {
     private void initComponents() {
 
         labelUser = new javax.swing.JLabel();
-        motDePasse = new javax.swing.JTextField();
         labelMDP = new javax.swing.JLabel();
         nomUtilisateur = new javax.swing.JTextField();
         ButtonMembre = new javax.swing.JRadioButton();
         ButtonExte = new javax.swing.JRadioButton();
         ButtonOk = new javax.swing.JButton();
         ButtonCancel = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPasswordField1 = new javax.swing.JPasswordField();
 
         labelUser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         labelUser.setText("Utilisateur : ");
-
-        motDePasse.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        motDePasse.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                motDePasseActionPerformed(evt);
-            }
-        });
 
         labelMDP.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         labelMDP.setText("Mot de passe :");
@@ -81,6 +74,8 @@ public class ApplicationGestionAutentification extends javax.swing.JFrame {
 
         ButtonCancel.setText("Annuler");
 
+        jPasswordField1.setText("jPasswordField1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,10 +93,14 @@ public class ApplicationGestionAutentification extends javax.swing.JFrame {
                             .addComponent(ButtonMembre))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(motDePasse, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nomUtilisateur, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ButtonExte, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(5, 5, 5))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ButtonExte, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(10, 10, 10))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(nomUtilisateur, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(ButtonOk, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -116,11 +115,11 @@ public class ApplicationGestionAutentification extends javax.swing.JFrame {
                     .addComponent(nomUtilisateur, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelUser)
-                        .addGap(39, 39, 39)
+                        .addGap(42, 42, 42)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelMDP)
-                            .addComponent(motDePasse, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25)))
+                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)))
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonMembre)
@@ -134,10 +133,6 @@ public class ApplicationGestionAutentification extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void motDePasseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_motDePasseActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_motDePasseActionPerformed
 
     private void nomUtilisateurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomUtilisateurActionPerformed
         // TODO add your handling code here:
@@ -185,9 +180,9 @@ public class ApplicationGestionAutentification extends javax.swing.JFrame {
     private javax.swing.JRadioButton ButtonExte;
     private javax.swing.JRadioButton ButtonMembre;
     private javax.swing.JButton ButtonOk;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel labelMDP;
     private javax.swing.JLabel labelUser;
-    private javax.swing.JTextField motDePasse;
     private javax.swing.JTextField nomUtilisateur;
     // End of variables declaration//GEN-END:variables
 }
