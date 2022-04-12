@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
-  </Properties>
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
@@ -39,11 +36,18 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="motDePasse" alignment="1" min="-2" pref="183" max="-2" attributes="0"/>
-                          <Component id="nomUtilisateur" alignment="1" min="-2" pref="183" max="-2" attributes="0"/>
-                          <Component id="ButtonExte" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="ButtonExte" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="jPasswordField1" min="-2" pref="178" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="nomUtilisateur" min="-2" pref="178" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="ButtonOk" min="-2" pref="198" max="-2" attributes="0"/>
@@ -63,12 +67,12 @@
                   <Component id="nomUtilisateur" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="labelUser" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelMDP" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="motDePasse" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="jPasswordField1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -94,16 +98,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Utilisateur : "/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="motDePasse">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="0"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="motDePasseActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="labelMDP">
       <Properties>
@@ -144,6 +138,11 @@
     <Component class="javax.swing.JButton" name="ButtonCancel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Annuler"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
       </Properties>
     </Component>
   </SubComponents>
